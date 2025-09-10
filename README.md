@@ -10,12 +10,4 @@ The server responds with **"Hello world!"** on the home page.
 - Git/GitHub integration
 - Project documentation with README and CHANGELOG
 
-## Installation
 
-```bash
-# Clone the repository
-git clone git@github.com:YOUR_GITHUB_USERNAME/myschool-devops-myproject.git
-cd myschool-devops-myproject
-
-# Install dependencies
-npm install
