@@ -1,0 +1,24 @@
+{
+  "name": "angel_devops_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angel0x7/angel_DevOps_Lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angel0x7/angel_DevOps_Lab/issues"
+  },
+  "homepage": "https://github.com/angel0x7/angel_DevOps_Lab#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

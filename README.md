@@ -1,1 +1,21 @@
-# angel_DevOps_Lab
+# MySchool DevOps Project
+
+A simple Node.js web server built with Express for learning DevOps best practices.  
+The server responds with **"Hello world!"** on the home page.
+
+## Features
+
+- Basic Node.js script
+- Express.js web server
+- Git/GitHub integration
+- Project documentation with README and CHANGELOG
+
+## Installation
+
+```bash
+# Clone the repository
+git clone git@github.com:YOUR_GITHUB_USERNAME/myschool-devops-myproject.git
+cd myschool-devops-myproject
+
+# Install dependencies
+npm install
