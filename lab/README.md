@@ -61,23 +61,3 @@ From the root directory of the project, run:
 ```
 npm test
 ```
-
-## Changelog (modifications récentes)
-
-Les changements récents effectués pour l'exercice TDD "GET user" :
-
-- Ajout de tests unitaires pour le controller (fichier `lab/test/user.controller.js`):
-  - `get a user by username` (crée un user puis appelle `get`)
-  - `cannot get a user when it does not exist`
-- Implémentation (ou validation) de la méthode `get` dans `lab/src/controllers/user.js` (lit Redis via `hgetall`, renvoie une erreur si l'utilisateur n'existe pas).
-- Ajout de tests d'API pour les routes (fichier `lab/test/user.router.js`):
-  - `GET /user/:username` pour récupérer un utilisateur existant (crée l'utilisateur puis teste la route)
-  - test pour un utilisateur inexistant (attend une réponse d'erreur 404/400 selon l'implémentation)
-- Ajout de la route GET `/user/:username` dans `lab/src/routes/user.js` (appelle `userController.get` et renvoie 200/404 selon le cas).
-- Pour faciliter les tests, le client Redis est mocké en mémoire quand `NODE_ENV=test` (fichier `lab/src/dbClient.js`) :
-  - si le paquet `redis-mock` est installé, il est utilisé automatiquement,
-  - sinon un fallback en mémoire fournit `flushdb`, `exists`, `hmset`, `hgetall`, `quit` et une propriété `connected: true` pour que les tests puissent s'exécuter sans Redis réel.
-
-Tous les tests passent localement : `npm test` (exécute Mocha sur `test/*.js`).
-
-Remarque : si vous préférez exécuter les tests contre un vrai serveur Redis, installez et démarrez Redis puis lancez `npm test` sans forcer `NODE_ENV=test`.

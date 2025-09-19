@@ -68,12 +68,11 @@ describe('User', () => {
         lastname: 'User'
       }
 
-      // 1. Create the user first
+
       userController.create(user, (err, result) => {
         expect(err).to.be.equal(null)
         expect(result).to.be.equal('OK')
 
-        // 2. Then try to get it
         userController.get(user.username, (err2, obj) => {
           expect(err2).to.be.equal(null)
           expect(obj).to.be.an('object')
@@ -84,7 +83,6 @@ describe('User', () => {
         })
       })
     })
-
     it('cannot get a user when it does not exist', (done) => {
       userController.get('this_user_does_not_exist', (err, obj) => {
         expect(err).to.not.be.equal(null)

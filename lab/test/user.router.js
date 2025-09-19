@@ -59,7 +59,7 @@ describe('User REST API', () => {
     })
   })
 
-  // describe('GET /user', ()=> {
+
   describe('GET /user', ()=> {
 
     it('get an existing user by username', (done) => {
@@ -69,7 +69,6 @@ describe('User REST API', () => {
         lastname: 'User'
       }
 
-      // create user first
       chai.request(app)
         .post('/user')
         .send(user)
@@ -92,12 +91,11 @@ describe('User REST API', () => {
       chai.request(app)
         .get('/user/some_non_existing_user')
         .then((res) => {
-          // Depending on implementation, either 404 or 400/other error
           chai.expect([200, 404, 400]).to.include(res.status)
           done()
         })
         .catch((err) => {
-          // If server returns an error status, chai-http may treat it as a rejection with the response
+
           if (err.response) {
             chai.expect([404,400]).to.include(err.response.status)
             done()

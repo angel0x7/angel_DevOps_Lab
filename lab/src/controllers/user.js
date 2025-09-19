@@ -37,8 +37,6 @@ module.exports = {
      
         return callback(new Error("User not found"), null)
       }
-
-    
       obj.username = username
       callback(null, obj)
     })

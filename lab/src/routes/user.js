@@ -23,6 +23,7 @@ userRouter
   })
   
   .get('/:username', (req, resp, next) => { 
+    const username = req.params.username
     userController.get(username, (err, obj) => {
       if (err) {
         const respObj = {
