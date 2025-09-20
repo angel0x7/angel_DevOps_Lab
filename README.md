@@ -75,7 +75,7 @@ A REST API GET `user` method that retrieves user information from the database.
     - cannot get a user when it does not exist
   -  **GET user route** (in the file `lab/src/routes/user.js`)
 
---
+
 # Lab2
 A simple Node.js web server built with Express for learning DevOps best practices.  
 The server responds with **"Hello world!"** on the home page.
